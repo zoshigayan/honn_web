@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HonnWeb</title>
+    <title>honn</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <header role="banner" class="header">
+      <p><%= link_to "honn", "/" %></p>
+    </header>
     <%= yield %>
   </body>
 </html>

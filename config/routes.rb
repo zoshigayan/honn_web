@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/", to: "books#index"
+  resources :books, only: [:show]
+
+  resources :authors, only: [:index, :show]
+  resources :publishers, only: [:index, :show]
 end
