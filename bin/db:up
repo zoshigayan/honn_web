@@ -1,2 +1,0 @@
-#!/bin/sh
-pg_ctl -D ${HOME}/postgres -l logfile start

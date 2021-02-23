@@ -1,2 +1,0 @@
-#!/bin/sh
-pg_ctl start -l $(cd $(dirname $0); pwd)/../log/logfile
