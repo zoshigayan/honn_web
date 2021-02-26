@@ -16,94 +16,22 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
-      <tr>
-        <td><img src="https://placehold.it/128x128" alt=""></td>
-        <td>吾輩は猫である</td>
-        <td>ほげりんこ</td>
-        <td>夏目漱石</td>
-        <td>2020-01-01</td>
-        <td>名著です！</td>
-      </tr>
+      {{ range .Books }}
+        <tr>
+          <td><img src="{{ .Thumbnail }}" alt=""></td>
+          <td>{{ .Title }}</td>
+          <td>{{ .Subtitle }}</td>
+          <td>
+            <ul class="list-inline">
+              {{ range .Authors }}
+                <li class="list-inline-item">{{ . }}</li>
+              {{ end }}
+            </ul>
+          </td>
+          <td>{{ .PublishDate }}</td>
+          <td>{{ .Description }}</td>
+        </tr>
+      {{ end }}
     </tbody>
   </table>
 </div>
