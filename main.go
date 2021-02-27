@@ -5,6 +5,7 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/zoshigayan/honn_web/config"
 	"github.com/zoshigayan/honn_web/controllers"
+	"github.com/zoshigayan/honn_web/db"
 	"net/http"
 )
 
@@ -17,6 +18,8 @@ func main() {
 	e.Use(middleware.Recover())
 
 	e.Static("/static", "assets")
+
+	db.Init()
 
 	// Routes
 	e.GET("/", func(c echo.Context) error {

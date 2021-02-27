@@ -25,16 +25,16 @@
       {{ range .Books }}
         <tr>
           <td><img src="{{ .Thumbnail }}" alt=""></td>
-          <td><a href="/books/{{ .Id }}">{{ .Title }}</a></td>
+          <td><a href="/books/{{ .ID }}">{{ .Title }}</a></td>
           <td>{{ .Subtitle }}</td>
           <td>
             <ul class="list-inline">
               {{ range .Authors }}
-                <li class="list-inline-item">{{ . }}</li>
+                <li class="list-inline-item">{{ .Name }}</li>
               {{ end }}
             </ul>
           </td>
-          <td>{{ .PublishDate }}</td>
+          <td>{{ .PublishedAt }}</td>
           <td>{{ .Description }}</td>
         </tr>
       {{ end }}

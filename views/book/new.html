@@ -1,0 +1,39 @@
+{{ define "book/new" }}
+{{ template "head" }}
+{{ template "header" }}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/books">図書一覧</a></li>
+    <li class="breadcrumb-item active" aria-current="page">新しい図書</li>
+  </ol>
+</nav>
+
+<main>
+  <form class="container" action="/books/create" method="post">
+    <div class="form-group">
+      <label for="Title">タイトル</label>
+      <input type="text" id="Title" name="Title" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="Subtitle">サブタイトル</label>
+      <input type="text" id="Subtitle" name="Subtitle" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="Author">著者</label>
+      <input type="text" id="Author" name="Author" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="PublishedAt">発行日</label>
+      <input type="date" id="PublishedAt" name="PublishedAt" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">追加</button>
+  </form>
+</main>
+
+{{ template "foot" }}
+{{ end }}

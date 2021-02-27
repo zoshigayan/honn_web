@@ -17,11 +17,11 @@
 
 <ul>
   {{ range .Book.Authors }}
-  <li>{{ . }}</li>
+  <li>{{ .Name }}</li>
   {{ end }}
 </ul>
 
-<p>{{ .PublishDate }}</p>
+<p>{{ .PublishedAt }}</p>
 <p>{{ .Description }}</p>
 
 {{ template "foot" }}
